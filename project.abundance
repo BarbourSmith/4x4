@@ -1,13 +1,174 @@
 {
-    "atomType": "Molecule",
-    "x": 0,
-    "y": 0,
-    "uniqueID": "id-27292",
-    "name": "4x4",
-    "topLevel": true,
-    "allAtoms": [],
-    "allConnectors": [],
-    "unitsKey": "MM",
-    "fileTypeVersion": 1,
-    "filetypeVersion": 1
+  "atomType": "Molecule",
+  "x": 0,
+  "y": 0,
+  "uniqueID": "id-27292",
+  "name": "4x4",
+  "ioValues": [
+    {
+      "name": "Length",
+      "ioValue": 10
+    }
+  ],
+  "topLevel": true,
+  "allAtoms": [
+    {
+      "atomType": "Output",
+      "x": 0.98,
+      "y": 0.5,
+      "uniqueID": "id-27293",
+      "ioValues": [
+        {
+          "name": "number or geometry",
+          "ioValue": "__GEOMETRY_INPUT__"
+        }
+      ]
+    },
+    {
+      "atomType": "Rectangle",
+      "x": 0.17235449735449737,
+      "y": 0.8079387186629526,
+      "uniqueID": "id-27295",
+      "ioValues": [
+        {
+          "name": "x length",
+          "ioValue": 88.89999999999999,
+          "currentEquation": "3.5*25.4"
+        },
+        {
+          "name": "y length",
+          "ioValue": 88.89999999999999,
+          "currentEquation": "3.5*25.4"
+        }
+      ]
+    },
+    {
+      "atomType": "Input",
+      "x": 0.025384615384615384,
+      "y": 0.15384615384615385,
+      "uniqueID": "id-27296",
+      "name": "Length",
+      "type": "number"
+    },
+    {
+      "atomType": "Equation",
+      "x": 0.2866412213740458,
+      "y": 0.5324561403508772,
+      "uniqueID": "id-27297",
+      "name": "L*25.4",
+      "ioValues": [
+        {
+          "name": "L",
+          "ioValue": 10
+        }
+      ],
+      "currentEquation": "L*25.4"
+    },
+    {
+      "atomType": "Extrude",
+      "x": 0.5512722646310433,
+      "y": 0.7780701754385965,
+      "uniqueID": "id-27298",
+      "ioValues": [
+        {
+          "name": "geometry",
+          "ioValue": "__GEOMETRY_INPUT__"
+        },
+        {
+          "name": "height",
+          "ioValue": 254
+        }
+      ]
+    },
+    {
+      "atomType": "Equation",
+      "x": 0.38796296296296295,
+      "y": 0.17005571030640665,
+      "uniqueID": "id-27299",
+      "name": "L + “ 2x6”",
+      "ioValues": [
+        {
+          "name": "L",
+          "ioValue": 10
+        }
+      ],
+      "currentEquation": "L + “ 2x6”"
+    },
+    {
+      "atomType": "Add-BOM-Tag",
+      "x": 0.5929894179894181,
+      "y": 0.32604456824512534,
+      "uniqueID": "id-27300",
+      "name": "Add BOM Tag",
+      "ioValues": [
+        {
+          "name": "geometry",
+          "ioValue": "__GEOMETRY_INPUT__"
+        },
+        {
+          "name": "Item Name",
+          "ioValue": "10 2x6",
+          "currentEquation": "New Item"
+        },
+        {
+          "name": "Number Needed",
+          "ioValue": 1
+        },
+        {
+          "name": "Cost (USD)",
+          "ioValue": 0
+        },
+        {
+          "name": "Source Link",
+          "ioValue": ""
+        }
+      ],
+      "BOMitem": {
+        "BOMitemName": "10 2x6",
+        "numberNeeded": 1,
+        "costUSD": 0,
+        "source": ""
+      }
+    }
+  ],
+  "allConnectors": [
+    {
+      "ap2Name": "geometry",
+      "ap1ID": "id-27295",
+      "ap2ID": "id-27298"
+    },
+    {
+      "ap2Name": "L",
+      "ap1ID": "id-27296",
+      "ap2ID": "id-27297"
+    },
+    {
+      "ap2Name": "L",
+      "ap1ID": "id-27296",
+      "ap2ID": "id-27299"
+    },
+    {
+      "ap2Name": "height",
+      "ap1ID": "id-27297",
+      "ap2ID": "id-27298"
+    },
+    {
+      "ap2Name": "geometry",
+      "ap1ID": "id-27298",
+      "ap2ID": "id-27300"
+    },
+    {
+      "ap2Name": "Item Name",
+      "ap1ID": "id-27299",
+      "ap2ID": "id-27300"
+    },
+    {
+      "ap2Name": "number or geometry",
+      "ap1ID": "id-27300",
+      "ap2ID": "id-27293"
+    }
+  ],
+  "unitsKey": "MM",
+  "fileTypeVersion": 1,
+  "filetypeVersion": 1
 }
